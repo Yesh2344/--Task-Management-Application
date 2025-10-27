@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Task Management</h1>
+
+    <form id="addTaskForm">
+        <label for="taskDescription">Description:</label>
+        <input type="text" id="taskDescription" required><br><br>
+
+        <label for="taskCategory">Category:</label>
+        <select id="taskCategory" required>
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Study">Study</option>
+        </select><br><br>
+
+        <label for="taskPriority">Priority:</label>
+        <input type="number" id="taskPriority" min="1" max="5" value="3" required><br><br>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Study">Study</option>
+    </select>
+
+    <button id="sortByPriority">Sort by Priority</button>
+
+    <ul id="taskList">
+        <!-- Tasks will be rendered here -->
+    </ul>
+
+    <script src="src/ui.js"></script>
+</body>
+</html>
